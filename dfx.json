@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "nasisi": {
+      "main": "src/nasisi/main.mo",
+      "type": "motoko"
+    },
+    "nasisi_assets": {
+      "dependencies": [
+        "nasisi"
+      ],
+      "frontend": {
+        "entrypoint": "src/nasisi_assets/src/index.html"
+      },
+      "source": [
+        "src/nasisi_assets/assets",
+        "dist/nasisi_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.8.3",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
